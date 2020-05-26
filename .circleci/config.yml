@@ -18,6 +18,9 @@ jobs:
       - run:
           name: where are we
           command: "pwd && ls"
+      - run:
+          name: build project and install 
+          command: "mkdir -p build && cd build && CC=gcc CXX=g++ cmake -D CMAKE_INSTALL_PREFIX=../tarball/build/ .. && make && make install"
 
 workflows:
   version: 2.1
