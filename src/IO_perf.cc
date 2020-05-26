@@ -72,6 +72,7 @@ void io::IO_perf::MeasureTime(double &exec)
 void io::IO_perf::write(std::ofstream &out, const int &n_data, double &execution)
 {
     auto start = std::chrono::high_resolution_clock::now();
+    // showDate(std::chrono::system_clock::now());
     for (int id = 0; id < n_data; ++id)
     {
         out << a_text << '\n';
@@ -95,4 +96,10 @@ void io::IO_perf::write_endl(std::ofstream &out, const int &n_data, double &exec
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start).count();
     execution = static_cast<double>(duration * 0.001); //give time in ms
+}
+
+void io::IO_perf::showDate(std::chrono::system_clock::time_point tp)
+{
+    std::time_t currentTime = std::chrono::system_clock::to_time_t(tp);
+    std::cout << std::ctime(&currentTime) << '\n';
 }

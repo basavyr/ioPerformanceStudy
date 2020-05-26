@@ -22,7 +22,7 @@ Time measurements were performed in microseconds inside the two writing procedur
 
 ```mermaid
 pie
-    title IO - `\n` vs. `std::endl` in time performance in first run
+    title IO - `\n` vs. `std::endl` 
     "\n":38464.6
     "std::endl":468137
 ```
@@ -31,7 +31,7 @@ pie
 
 ```mermaid
 pie
-    title IO - `\n` vs. `std::endl` in time performance
+    title IO - `\n` vs. `std::endl`
     "\n":4690.85
     "std::endl":7061.97
 ```
@@ -60,16 +60,20 @@ ___
 
 As mentioned, the bandwidth is computed after the timing measurements for the two writing procedures are finished, and they are calculated as the ratio of the total number of Megabytes as string data in the file, over the total time required for each writing procedure to be finished.
 
+#### Example run 0
+
 ```mermaid
 pie
-    title IO - `\n` vs. `std::endl` in time performance 
+    title Bandwidth
     "\n": 3455.3
     "std::endl": 2277.64
 ```
 
+#### Example run 0
+
 ```mermaid
 pie
-    title IO - `\n` vs. `std::endl` in time performance
+    title Bandwidth
     "\n":454.964
     "std::endl": 37.3822
 ```

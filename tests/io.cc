@@ -21,6 +21,10 @@ int main()
 {
     int N = 1000000;
     int reps = 100;
+    const std::string user = "Darwin";
+    std::cout << "Hi " << user << '\n';
+    std::cout << "Current time is: ";
+    io::IO_perf::showDate(std::chrono::system_clock::now());
     // int it = 1;
     // while (N)
     // {
