@@ -20,7 +20,7 @@ void run_uninterrupted_test(const int N)
 int main()
 {
     int N = 1000000;
-    int reps = 100;
+    int reps = 110;
     const std::string user = "Darwin";
     std::cout << "Hi " << user << '\n';
     std::cout << "Current time is: ";
