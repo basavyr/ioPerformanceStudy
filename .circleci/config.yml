@@ -71,7 +71,10 @@ jobs:
       - checkout
       - run:
           name: "install C++ compilers "
-          command: yum install -y g++ gcc
+          command: yum installl -y gcc # installing only g++/gcc doesn't work on centos
+      # - run:
+      #     name: "install C++ compilers "
+      #     command: dnf groupinstall "Development Tools" # installing only g++/gcc doesn't work on centos
       - run:
           name: "install cmake "
           command: yum install -y cmake
