@@ -16,3 +16,19 @@ Some useful guides in working with timing functions:
 ## Benchmark results
 
 Results can be seen [here](benchmarks.md).
+
+## Fixed issues:
+
+1. The `centos:latest` container needs *Development Tools* and not just *gcc*, otherwise it will complain on building the project with `CMake`.
+2. The `ubuntu:latest` container needs the environment variables to be declared in the command line:
+
+```yaml
+ - run:
+    name: "set env vars again"
+    command: |
+            echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+            echo export DEBIAN_FRONTEND=noninteractive >> $BASH_ENV
+            source $BASH_ENV
+```
+
+Guide for implementing the environment variables into command line after container was properly set up can be found [here](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-shell-command)
