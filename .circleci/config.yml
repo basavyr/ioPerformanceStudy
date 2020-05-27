@@ -72,6 +72,7 @@ jobs:
       - run:
           name: "install C++ compilers "
           command: dnf groupinstall -y "Development Tools" # installing only g++/gcc doesn't work on centos
+          ##without development tools, cmake will complain
       # - run:
       #     name: "install C++ compilers "
       #     command: dnf groupinstall "Development Tools" # installing only g++/gcc doesn't work on centos
